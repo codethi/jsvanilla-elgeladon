@@ -12,16 +12,15 @@
 </head>
 
 <body>
-    <section class="Home">
+    <section class="home">
 
-        <header class="Home__header Header">
+        <header class="header">
             <div class="row">
-                <div class="Header__logo Logo">
-                    <img src="./assets/images/logo.svg" width="70px" alt="Logo El Geladon" class="Logo__icone" />
-                    <span class="Logo__titulo"> El Geladon </span>
+                <div class="logo">
+                    <img src="./assets/images/logo.svg" width="70px" alt="Logo El Geladon" class="logo-icon" />
+                    <span class="logo-title"> El Geladon </span>
                 </div>
-
-                <div class="Header__opcoes Opcoes">
+                <div class="search-space">
                     <input type="text" id="search-input" placeholder="Digite o ID da paleta" />
                     <button class="search-button" onclick="findByIdPaletas()"><i class="bi bi-search"></i></button>
                 </div>
@@ -34,55 +33,59 @@
                 <a href="/" class="default-button list-all">Listar todas as paletas</a>
                 <button type="button" class="default-button" onclick="abrirModal()">Cadastrar Paleta</button>
             </div>
-
         </section>
 
-        <section class="modal-overlay" id="overlay">
 
-            <div class="modal">
+        <div class="home-container">
+            <div class="paleta-list" id="paletaList"></div>
+            <div id="chosen-paleta"></div>
+        </div>
 
-                <div class="modal-header">
-                    <h2 id="title-header-modal">Cadastrar uma paleta</h2>
-                    <a onclick="fecharModal()" class="close-modal">x</a>
-                </div>
+    </section>
 
-                <div class="modal-body">
-                    <div>
-                        <input type="hidden" id="id">
-                        <input type="text" name="sabor" id="sabor" placeholder="Sabor da Paleta">
-                        <input type="number" name="preco" id="preco" placeholder="Preço da Paleta">
-                        <textarea type="text" name="descricao" id="descricao" placeholder="Descrição da Paleta"
-                            rows="5"></textarea>
-                        <input type="text" name="foto" id="foto" placeholder="Link da Foto da Paleta">
-                        <button id="button-form-modal" onclick="submitPaleta()">Cadastrar</button>
-                    </div>
+
+    <!-- Modals -->
+    <!-- Modal create and update -->
+    <section class="modal-overlay" id="overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 id="title-header-modal">Cadastrar uma paleta</h2>
+                <a onclick="fecharModal()" class="close-modal">x</a>
+            </div>
+
+            <div class="modal-body">
+                <div>
+                    <input type="hidden" id="id">
+                    <input type="text" name="sabor" id="sabor" placeholder="Sabor da Paleta">
+                    <input type="number" name="preco" id="preco" placeholder="Preço da Paleta">
+                    <textarea type="text" name="descricao" id="descricao" placeholder="Descrição da Paleta"
+                        rows="5"></textarea>
+                    <input type="text" name="foto" id="foto" placeholder="Link da Foto da Paleta">
+                    <button id="button-form-modal" onclick="submitPaleta()">Cadastrar</button>
                 </div>
             </div>
-        </section>
-
-        <section class="modal-overlay" id="overlay-delete">
-            <div class="modal">
-                <div class="modal-header">
-                    <h2 id="title-header-modal">Confirmação de deleção</h2>
-                    <a onclick="fecharModalDelete()" class="close-modal">x</a>
-                </div>
-                <div class="modal-body-delete">
-                    <p>Deseja realmente apagar essa paleta?</p>
-                    <div class="btns_delete">
-                        <button class="btn_delete_no btn_delete" onclick="fecharModalDelete()">Não</button>
-                        <button class="btn_delete_yes btn_delete">Sim</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <div class="Home__container">
-            <div class="PaletaLista" id="paletaList"></div>
-
-            <div id="paletaEscolhida"></div>
         </div>
     </section>
+    <!-- /Modal create and update -->
+
+    <!-- Modal delete -->
+    <section class="modal-overlay" id="overlay-delete">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 id="title-header-modal">Confirmação de deleção</h2>
+                <a onclick="fecharModalDelete()" class="close-modal">x</a>
+            </div>
+            <div class="modal-body-delete">
+                <p>Deseja realmente apagar essa paleta?</p>
+                <div class="btns-delete">
+                    <button class="btn-delete-no btn-delete" onclick="fecharModalDelete()">Não</button>
+                    <button class="btn-delete-yes btn-delete">Sim</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Modal delete -->
+    <!-- /Modals -->
 
     <script src="./assets/script.js"></script>
 </body>

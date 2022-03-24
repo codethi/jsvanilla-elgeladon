@@ -14,7 +14,7 @@ html {
   background-color: #ffffff;
 }
 
-.Home {
+.home {
   position: relative;
   background-image: radial-gradient(
     farthest-corner at 40px 40px,
@@ -29,13 +29,13 @@ html {
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
 }
 
-.Home h2 {
+.home h2 {
   display: flex;
   justify-content: center;
   color: #000000;
 }
 
-.Home__container {
+.home-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,31 +43,31 @@ html {
 }
 
 @media (max-width: 350px) {
-  .Home__container {
+  .home-container {
     justify-content: unset;
   }
 }
 
-.PaletaLista {
+.paleta-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 25px 50px;
 }
 
 @media (max-width: 1220px) {
-  .PaletaLista {
+  .paleta-list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 840px) {
-  .PaletaLista {
+  .paleta-list {
     grid-template-columns: 1fr;
   }
 }
 
-.PaletaCardItem,
-.PaletaListaItem {
+.paleta-card-item,
+.paleta-card-item {
   background: #ffffff4d;
   border-radius: 10px;
   padding: 10px;
@@ -76,49 +76,47 @@ html {
   justify-content: space-around;
 }
 
-.PaletaCardItem {
+.paleta-card-item {
   height: 150px;
   width: 315px;
 }
 
-.PaletaCardItem__foto {
-  height: 150px;
-  margin-right: -60px;
-}
+
 
 @media (max-width: 400px) {
-  .PaletaCardItem,
-  .PaletaListaItem {
+  .paleta-card-item,
+  .paleta-card-item {
     width: 210px;
     height: 180px;
   }
 }
 
-.PaletaCardItem > div,
-.PaletaListaItem > div {
+.paleta-card-item > div,
+.paleta-card-item > div {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
 }
 
-.PaletaCardItem__sabor,
-.PaletaListaItem__sabor {
+.paleta-card-item-sabor,
+.paleta-list-item-sabor {
   font-size: 1.5em;
   font-weight: 700;
   line-height: 100%;
 }
 
-.PaletaCardItem__descricao,
-.PaletaListaItem__descricao {
+.paleta-card-item-descricao,
+.paleta-list-item-descricao {
   font-size: 0.85em;
 }
 
-.PaletaCardItem__preco,
-.PaletaListaItem__preco {
+.paleta-card-item-preco,
+.paleta-list-item-preco {
   color: #9400d3;
 }
 
-.PaletaListaItem__foto {
+.paleta-list-item-foto,
+.paleta-card-item-foto {
   height: 150px;
   margin-right: -60px;
 }
@@ -175,14 +173,7 @@ html {
   color: #ffffff;
 }
 
-#paleta-escolhida-input-espaco {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-.Header {
+.header {
   max-width: 1110px;
   margin: 0 auto 25px auto;
   position: relative;
@@ -195,7 +186,7 @@ html {
   margin: 20px 0 35px 0;
 }
 
-.Logo {
+.logo {
   display: flex;
   align-items: center;
   border-radius: 10px;
@@ -204,58 +195,33 @@ html {
   height: 45px;
 }
 
-.Logo__titulo {
+.logo-title  {
   position: absolute;
   left: 55px;
   font-weight: 700;
   font-size: 2.5rem;
 }
 
-.Logo__icone {
+.logo-icon {
   position: absolute;
   left: -20px;
   top: -15px;
 }
 
-.Sacola {
-  position: relative;
-}
-
-.Sacola__icone {
-  cursor: pointer;
-}
-
-.Sacola__badge {
-  background-color: red;
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  vertical-align: middle;
-  position: absolute;
-  color: white;
-  font-size: 0.9em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  bottom: 0;
-  right: 0;
-}
-
 @media (max-width: 1220px) {
-  .Header {
+  .header {
     max-width: 720px;
   }
 }
 
 @media (max-width: 840px) {
-  .Header {
+  .header {
     max-width: 320px;
   }
 }
 
 @media (max-width: 400px) {
-  .Header {
+  .header {
     max-width: 250px;
   }
 
@@ -263,7 +229,7 @@ html {
     column-gap: 20px;
   }
 
-  .Logo__titulo {
+  .logo-title {
     font-size: 1.5em;
   }
 }
@@ -389,7 +355,7 @@ textarea {
   border-radius: 0.3rem;
 }
 
-.Acoes {
+.actions {
   display: flex;
   justify-content: space-around;
   width: 100%;
@@ -409,24 +375,24 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
-.Acoes__editar {
+.actions-edit {
   color: #003cff;
   border: solid 1px #003cff;
   background-color: transparent;
 }
 
-.Acoes__editar:hover {
+.actions-edit:hover {
   color: #fff;
   background-color: #003cff;
 }
 
-.Acoes__apagar {
+.actions-delete {
   color: #ff0000;
   border: solid 1px #ff0000;
   background-color: transparent;
 }
 
-.Acoes__apagar:hover {
+.actions-delete:hover {
   color: #fff;
   background-color: #ff0000;
 }
@@ -442,13 +408,13 @@ textarea {
   font-size: 1.5rem;
 }
 
-.btns_delete {
+.btns-delete {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
 }
 
-.btn_delete {
+.btn-delete {
   background-color: transparent;
   padding: 0.5rem;
   font-size: 1.2rem;
@@ -458,22 +424,22 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
-.btn_delete_no {
+.btn-delete-no {
   color: #ff0000;
   border: solid 1px #ff0000;
 }
 
-.btn_delete_no:hover {
+.btn-delete-no:hover {
   background-color: #ff0000;
   color: #fff;
 }
 
-.btn_delete_yes {
+.btn-delete-yes {
   color: #00b309;
   border: solid 1px #00b309;
 }
 
-.btn_delete_yes:hover {
+.btn-delete-yes:hover {
   background-color: #00b309;
   color: #fff;
 }
