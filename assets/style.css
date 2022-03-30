@@ -67,7 +67,7 @@ html {
 }
 
 .paleta-card-item,
-.paleta-card-item {
+.paleta-list-item {
   background: #ffffff4d;
   border-radius: 10px;
   padding: 10px;
@@ -85,14 +85,14 @@ html {
 
 @media (max-width: 400px) {
   .paleta-card-item,
-  .paleta-card-item {
+  .paleta-list-item {
     width: 210px;
     height: 180px;
   }
 }
 
 .paleta-card-item > div,
-.paleta-card-item > div {
+.paleta-list-item > div {
   display: flex;
   justify-content: space-between;
   flex-direction: column;

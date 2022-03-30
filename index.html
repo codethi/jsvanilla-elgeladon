@@ -27,13 +27,13 @@
             </div>
         </header>
 
-        <section class="options">
-            <span class="msg-alert"></span>
-            <div class="btns-list-cad">
-                <a href="/" class="default-button list-all">Listar todas as paletas</a>
-                <button type="button" class="default-button" onclick="abrirModal()">Cadastrar Paleta</button>
-            </div>
-        </section>
+            <section class="options">
+                <span class="msg-alert"></span>
+                <div class="btns-list-cad">
+                    <a href="/" class="default-button list-all">Listar todas as paletas</a>
+                    <button type="button" class="default-button" onclick="showModal()">Cadastrar Paleta</button>
+                </div>
+            </section>
 
 
         <div class="home-container">
@@ -50,7 +50,7 @@
         <div class="modal">
             <div class="modal-header">
                 <h2 id="title-header-modal">Cadastrar uma paleta</h2>
-                <a onclick="fecharModal()" class="close-modal">x</a>
+                <a onclick="closeModal()" class="close-modal">x</a>
             </div>
 
             <div class="modal-body">
@@ -73,12 +73,12 @@
         <div class="modal">
             <div class="modal-header">
                 <h2 id="title-header-modal">Confirmação de deleção</h2>
-                <a onclick="fecharModalDelete()" class="close-modal">x</a>
+                <a onclick="closeModalDelete()" class="close-modal">x</a>
             </div>
             <div class="modal-body-delete">
                 <p>Deseja realmente apagar essa paleta?</p>
                 <div class="btns-delete">
-                    <button class="btn-delete-no btn-delete" onclick="fecharModalDelete()">Não</button>
+                    <button class="btn-delete-no btn-delete" onclick="closeModalDelete()">Não</button>
                     <button class="btn-delete-yes btn-delete">Sim</button>
                 </div>
             </div>

@@ -40,9 +40,6 @@ async function findByIdPaletas() {
     localStorage.setItem("message", "Digite um ID para pesquisar!");
     localStorage.setItem("type", "danger");
 
-    msgAlert.innerText = localStorage.getItem("message");
-    msgAlert.classList.add(localStorage.getItem("type"));
-
     closeMessageAlert();
     return;
   }
